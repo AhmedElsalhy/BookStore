@@ -13,7 +13,16 @@ class SplashViewBody extends StatelessWidget {
         Image.asset(
           AssetsPath.logo,
           color: Colors.white,
+          height: 200,
+          width: 200,
         ),
+        const SizedBox(
+          height: 8,
+        ),
+        const Text(
+          'Discover the Magic of Books...',
+          textAlign: TextAlign.center,
+        )
       ],
     );
   }

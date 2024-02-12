@@ -1,3 +1,4 @@
+import 'package:book_store/core/utils/assets_paths.dart';
 import 'package:flutter/material.dart';
 
 class SplashViewBody extends StatelessWidget {
@@ -5,8 +6,15 @@ class SplashViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [],
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset(
+          AssetsPath.logo,
+          color: Colors.white,
+        ),
+      ],
     );
   }
 }

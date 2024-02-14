@@ -42,7 +42,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
           AssetsPath.logo,
           color: Colors.white,
           height: 200,
-          width: 200,
         ),
         const SizedBox(
           height: 8,

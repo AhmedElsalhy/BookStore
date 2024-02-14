@@ -1,3 +1,4 @@
+import 'package:book_store/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_app_bar.dart';
@@ -11,9 +12,17 @@ class HomeViewBody extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomAppBar(),
           FeaturedBooksListView(),
+          SizedBox(
+            height: 64,
+          ),
+          Text(
+            'Best Seller',
+            style: Styles.titleMedium,
+          )
         ],
       ),
     );

@@ -3,6 +3,7 @@ import 'package:book_store/Features/home/presentation/views/widgets/custom_book_
 import 'package:book_store/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
+import 'book_button_actions.dart';
 import 'custom_book_details_app_bar.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -43,7 +44,11 @@ class BookDetailsViewBody extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          const BookRating()
+          const BookRating(),
+          const SizedBox(
+            height: 37,
+          ),
+          const BookButtonActions(),
         ],
       ),
     );

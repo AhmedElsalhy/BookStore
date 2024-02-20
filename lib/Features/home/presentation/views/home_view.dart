@@ -22,7 +22,7 @@ class HomeView extends StatelessWidget {
           BlocProvider(
             create: (context) => NewestBookCubit(
               getIt.get<HomeRepoImpl>(),
-            ),
+            )..fetchNewestBooks(),
           ),
         ],
         child: const HomeViewBody(),

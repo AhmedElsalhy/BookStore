@@ -249,7 +249,7 @@ class SearchInfo {
 }
 
 class VolumeInfo {
-  final String? title;
+  final String title;
   final List<String>? authors;
   final String? publisher;
   final String? publishedDate;
@@ -259,7 +259,7 @@ class VolumeInfo {
   final int? pageCount;
   final String? printType;
   final List<String>? categories;
-  final num? averageRating;
+  final int? averageRating;
   final int? ratingsCount;
   final String? maturityRating;
   final bool? allowAnonLogging;
@@ -272,7 +272,7 @@ class VolumeInfo {
   final String? canonicalVolumeLink;
 
   const VolumeInfo({
-    this.title,
+    required this.title,
     this.authors,
     this.publisher,
     this.publishedDate,
@@ -296,7 +296,7 @@ class VolumeInfo {
   });
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
-        title: json['title'] as String?,
+        title: json['title'] as String,
         authors: (json['authors'] as List<dynamic>?)?.cast<String>(),
         publisher: json['publisher'] as String?,
         publishedDate: json['publishedDate'] as String?,

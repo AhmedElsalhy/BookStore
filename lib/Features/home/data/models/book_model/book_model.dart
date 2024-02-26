@@ -259,7 +259,7 @@ class VolumeInfo {
   final int? pageCount;
   final String? printType;
   final List<String>? categories;
-  final int? averageRating;
+  final num? averageRating;
   final int? ratingsCount;
   final String? maturityRating;
   final bool? allowAnonLogging;

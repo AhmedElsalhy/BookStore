@@ -1,5 +1,5 @@
-import 'package:book_store/Features/home/data/models/book_model/book_model.dart';
-import 'package:book_store/core/function/url_launcher.dart';
+import 'package:book_store/core/models/book_model/book_model.dart';
+import 'package:book_store/core/utils/function/url_launcher.dart';
 import 'package:book_store/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 

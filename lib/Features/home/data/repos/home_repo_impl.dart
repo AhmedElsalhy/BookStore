@@ -1,6 +1,6 @@
-import 'package:book_store/Features/home/data/models/book_model/book_model.dart';
 import 'package:book_store/Features/home/data/repos/home_repo.dart';
 import 'package:book_store/core/errors/failures.dart';
+import 'package:book_store/core/models/book_model/book_model.dart';
 import 'package:book_store/core/utils/api_service.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';

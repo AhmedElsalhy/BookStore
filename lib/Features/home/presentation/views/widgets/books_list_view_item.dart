@@ -1,7 +1,7 @@
-import 'package:book_store/Features/home/data/models/book_model/book_model.dart';
 import 'package:book_store/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:book_store/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:book_store/constants.dart';
+import 'package:book_store/core/models/book_model/book_model.dart';
 import 'package:book_store/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -48,9 +48,12 @@ class BookListViewItem extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                  Text(
-                    bookModel.volumeInfo.authors![0],
-                    style: Styles.textStyle14,
+                  Flexible(
+                    child: Text(
+                      bookModel.volumeInfo.authors?.first ?? 'Unknown Author',
+                      style: Styles.textStyle14,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                   const SizedBox(
                     height: 3,

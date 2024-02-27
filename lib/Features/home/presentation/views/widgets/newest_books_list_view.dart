@@ -4,7 +4,7 @@ import 'package:book_store/core/widgets/custom_loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'newest_books_list_view_item.dart';
+import 'books_list_view_item.dart';
 
 class NewestBooksListView extends StatelessWidget {
   const NewestBooksListView({super.key});
@@ -18,7 +18,7 @@ class NewestBooksListView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: ListView.builder(
               padding: EdgeInsets.zero,
-              itemCount: 10,
+              itemCount: state.books.length,
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
                 return Padding(

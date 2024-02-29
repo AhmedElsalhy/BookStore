@@ -3,7 +3,6 @@ import 'package:book_store/core/widgets/custom_error_widget.dart';
 import 'package:book_store/core/widgets/custom_loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 import 'custom_book_item.dart';
 
@@ -25,15 +24,6 @@ class SimilarListViewBook extends StatelessWidget {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 5),
                   child: CustomBookImage(
-                    onTap: () {
-                      GoRouter.of(context).go(
-                        '/bookDetailsView',
-                        extra: state.books[index],
-                      );
-                    },
-                    imageUrl:
-                        state.books[index].volumeInfo.imageLinks?.thumbnail ??
-                            '',
                     bookModel: state.books[index],
                   ),
                 );

@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomBookImage extends StatelessWidget {
-  const CustomBookImage(
-      {super.key, required this.imageUrl, required this.bookModel, this.onTap});
+  const CustomBookImage({
+    super.key,
+    required this.bookModel,
+  });
 
-  final String imageUrl;
   final BookModel bookModel;
-  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class CustomBookImage extends StatelessWidget {
           aspectRatio: 2.9 / 4,
           child: CachedNetworkImage(
             fit: BoxFit.fill,
-            imageUrl: imageUrl,
+            imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '',
             errorWidget: (context, url, error) => const Icon(
               Icons.error,
             ),

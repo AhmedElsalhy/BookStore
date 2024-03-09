@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'book_button_actions.dart';
 import 'book_rating.dart';
-import 'custom_book_item.dart';
+import 'custom_book_image.dart';
 
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({super.key, required this.bookModel});

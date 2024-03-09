@@ -18,8 +18,7 @@ class SearchRepoImpl implements SearchRepo {
       String endPoint;
       if (query.isEmpty || query.length == 1) {
         // If query is empty, fetch programming books
-        endPoint =
-            'volumes?Filtering=free-ebooks&Sorting=relevance&q=Programming';
+        endPoint = 'volumes?Filtering=free-ebooks&Sorting=relevance&q=Subject:';
       } else {
         // If query is not empty, fetch books based on the query
         endPoint =

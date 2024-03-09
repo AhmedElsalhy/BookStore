@@ -4,7 +4,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  const CustomAppBar({super.key, required this.category});
+
+  final String category;
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +22,7 @@ class CustomAppBar extends StatelessWidget {
           const Spacer(),
           IconButton(
             onPressed: () {
-              GoRouter.of(context).push(
-                '/searchView',
-              );
+              GoRouter.of(context).push('/searchView', extra: category);
             },
             icon: const Icon(
               FontAwesomeIcons.magnifyingGlass,

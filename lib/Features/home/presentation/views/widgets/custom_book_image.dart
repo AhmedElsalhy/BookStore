@@ -15,7 +15,10 @@ class CustomBookImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push('/bookDetailsView', extra: bookModel);
+        GoRouter.of(context).push(
+          '/bookDetailsView',
+          extra: bookModel,
+        );
       },
       child: ClipRRect(
         borderRadius: BorderRadius.circular(16),

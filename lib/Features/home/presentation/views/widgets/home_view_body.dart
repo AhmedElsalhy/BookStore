@@ -6,39 +6,43 @@ import 'featured_books_list_view.dart';
 import 'newest_books_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
+  const HomeViewBody({super.key, required this.category});
+
+  final String category;
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      physics: BouncingScrollPhysics(),
+    return CustomScrollView(
+      physics: const BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
-                child: CustomAppBar(),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: CustomAppBar(
+                  category: category,
+                ),
               ),
-              FeaturedBooksListView(),
-              SizedBox(
+              const FeaturedBooksListView(),
+              const SizedBox(
                 height: 64,
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
                   'Newest Books',
                   style: Styles.textStyle20,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],
           ),
         ),
-        SliverFillRemaining(
+        const SliverFillRemaining(
           child: NewestBooksListView(),
         )
       ],

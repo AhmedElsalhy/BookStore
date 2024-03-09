@@ -4,7 +4,7 @@ import 'package:book_store/core/widgets/custom_loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'custom_book_item.dart';
+import 'custom_book_image.dart';
 
 class SimilarListViewBook extends StatelessWidget {
   const SimilarListViewBook({super.key});

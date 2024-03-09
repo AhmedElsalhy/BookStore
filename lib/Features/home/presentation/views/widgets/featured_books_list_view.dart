@@ -3,9 +3,8 @@ import 'package:book_store/core/widgets/custom_error_widget.dart';
 import 'package:book_store/core/widgets/custom_loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
-import 'custom_book_item.dart';
+import 'custom_book_image.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
   const FeaturedBooksListView({super.key});
@@ -24,16 +23,8 @@ class FeaturedBooksListView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
-                  child: GestureDetector(
-                    onTap: () {
-                      GoRouter.of(context).push(
-                        '/bookDetailsView',
-                        extra: state.books[index],
-                      );
-                    },
-                    child: CustomBookImage(
-                      bookModel: state.books[index],
-                    ),
+                  child: CustomBookImage(
+                    bookModel: state.books[index],
                   ),
                 );
               },

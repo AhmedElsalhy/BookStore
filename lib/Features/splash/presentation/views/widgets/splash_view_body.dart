@@ -38,7 +38,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
         Image.asset(
           AssetsPath.logo,
           color: Colors.white,
-          height: 250,
+          height: 300,
         ),
         const SizedBox(
           height: 8,
@@ -63,7 +63,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(seconds: 3),
       () {
-        GoRouter.of(context).push('/homeView');
+        GoRouter.of(context).push('/categoryView');
       },
     );
   }

@@ -1,3 +1,4 @@
+import 'package:book_store/Features/category/presentation/views/category_view.dart';
 import 'package:book_store/Features/home/data/repos/home_repo_impl.dart';
 import 'package:book_store/Features/home/presentation/view_models/similar_books_cubit/fetch_similar_books_cubit.dart';
 import 'package:book_store/Features/home/presentation/views/book_details_view.dart';
@@ -19,17 +20,14 @@ abstract class AppRouter {
         builder: (context, state) => const SplashView(),
       ),
       GoRoute(
-        path: '/searchView',
-        builder: (context, state) => BlocProvider(
-          create: (context) => SearchBookCubit(
-            getIt.get<SearchRepoImpl>(),
-          ),
-          child: const SearchView(),
+        path: '/homeView',
+        builder: (context, state) => const HomeView(
+          category: '',
         ),
       ),
       GoRoute(
-        path: '/homeView',
-        builder: (context, state) => const HomeView(),
+        path: '/categoryView',
+        builder: (context, state) => const CategoryView(),
       ),
       GoRoute(
         path: '/bookDetailsView',
@@ -40,6 +38,15 @@ abstract class AppRouter {
           child: BookDetailsView(
             bookModel: state.extra as BookModel,
           ),
+        ),
+      ),
+      GoRoute(
+        path: '/searchView',
+        builder: (context, state) => BlocProvider(
+          create: (context) => SearchBookCubit(
+            getIt.get<SearchRepoImpl>(),
+          ),
+          child: const SearchView(),
         ),
       ),
     ],

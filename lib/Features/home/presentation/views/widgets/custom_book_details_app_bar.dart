@@ -11,7 +11,7 @@ class CustomBookDetailsAppBar extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {
-            GoRouter.of(context).pushReplacement('/homeView');
+            GoRouter.of(context).pop();
           },
           icon: const Icon(
             Icons.close,
